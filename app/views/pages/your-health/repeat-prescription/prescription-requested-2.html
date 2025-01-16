@@ -13,35 +13,11 @@
         titleText: pageHeading
       }) }}
 
-      <h2>What to do next</h2>
+      <p>Your request has been sent to your GP surgery for approval.</p>
 
-      {{ nhsappTimeline({
-        items: [
-          {
-            headingText: "Wait for approval",
-            text: "The medicines you have requested will need to be approved by your GP. If your request is rejected, contact your GP surgery.",
-            active: true
-          },
-          {
-            headingText: "Collect prescription",
-            text: "Once your medicines are approved, it can take 3 to 5 working days for your chosen pharmacy to prepare your prescription."
-          }
-        ]
-      }) }}
+      <h2>What happens next</h2>
 
-      <div class="nhsapp-card">
-        <div class="nhsapp-card__container">
-          <div class="nhsapp-card__content">
-            <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="/pages/your-health/requested-medicines">
-              Requested medicines
-            </a>
-            <div class="nhsapp-card__below">
-              <p class="nhsuk-u-margin-top-1">Check if your GP has approved the medicines you requested </p>
-            </div>
-          </div>
-          {{ nhsappIcon('chevronRight') }}
-        </div>
-      </div>
+      <p>Once approved, it can take 3 to 5 working days for a pharmacy to prepare your prescription.</p>
 
     </div>
   </div>
