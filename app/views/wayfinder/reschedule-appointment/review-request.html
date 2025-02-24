@@ -1,0 +1,159 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+{% set backLinkURL = "/pages/your-health/view-or-manage-appointment" %}
+
+{% set pageHeading = "Review your request" %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      {% include "components/provider-banner/include.html" %}
+
+      <!--<strong class="nhsapp-tag nhsapp-tag--red nhsuk-u-static-margin-bottom-2">Action needed</strong>-->
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true
+      })}}
+      <h2 class="nhsuk-heading-l">Your old appointment</h2>
+
+      {{ summaryList({
+        classes: "nhsuk-u-margin-bottom-4",
+        rows: [
+        {
+          key: {
+            text: "Date"
+          },
+          value: {
+            html: "Wednesday 1 May 2024"
+          }
+        },
+        {
+          key: {
+            text: "Time"
+          },
+          value: {
+            html: "9:40am"
+          }
+        },
+          {
+            key: {
+              text: "Location"
+            },
+            value: {
+              html: "Croydon University Hospital, The Willows, Croydon, RJ6"
+            }
+          },
+          {
+            key: {
+              text: "Clinician"
+            },
+            value: {
+              text: "Dr Donald Glover"
+            }
+          }
+        ]
+      }) }}
+
+      <p class="nhsuk-u-margin-bottom-4"></p>
+      <h2 class="nhsuk-heading-l">Your requested appointment</h2>
+
+      {{ summaryList({
+        classes: "nhsuk-u-margin-bottom-4",
+        rows: [
+        {
+          key: {
+            text: "Date"
+          },
+          value: {
+            html: "Wednesday 15 May 2024"
+          }
+        },
+        {
+          key: {
+            text: "Time"
+          },
+          value: {
+            html: "9:40am"
+          }
+        },
+          {
+            key: {
+              text: "Location"
+            },
+            value: {
+              html: "Croydon University Hospital, The Willows, Croydon, RJ6"
+            }
+          },
+          {
+            key: {
+              text: "Clinician"
+            },
+            value: {
+              text: "Dr Donald Glover"
+            }
+          }
+        ]
+      }) }}
+
+      <p class="nhsuk-u-margin-bottom-4"></p>
+
+
+    <h2 class="nhsuk-heading-l">Reason</h2> 
+    <p class="nhsuk-body">I cannot attend at the scheduled time</p>
+    <form>
+
+      <p class="nhsuk-u-margin-bottom-4"></p>
+
+
+      <h2 class="nhsuk-heading-l">Confirm</h2> 
+     
+      <form>
+
+
+      <div class="nhsuk-form-group">
+    
+        
+    
+        
+    
+          <div class="nhsuk-checkboxes">
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                I understand that I am asking to reschedule my appointment
+              </label>
+            </div>
+    
+            <div class="nhsuk-u-padding-bottom-6"></div>
+    
+          </div>
+        </fieldset>
+    
+        <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+          Request new appointment
+        </button>
+      </div>
+    
+    </form>
+      
+
+     
+
+      <!-- SECTION -->
+      {{ nhsappSectionHeading({
+        headingText: "Get help with this task",
+        subheadingText: "Contact the booking team on 01234 567 891"
+      }) }}
+
+    </div>
+  </div>
+
+  {% endblock %}

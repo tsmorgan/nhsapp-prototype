@@ -2,29 +2,35 @@
 
 {% set hub = "Your health" %}
 
+
+
 {% set backLink = true %}
 {% set backLinkURL = "/pages/your-health/view-or-manage-appointment" %}
 
-{% set pageHeading = "Ask to cancel your appointment" %}
 
 
 {% block content %}
 
+
+
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
+      
       {% include "components/provider-banner/include.html" %}
 
-      <!--<strong class="nhsapp-tag nhsapp-tag--red nhsuk-u-static-margin-bottom-2">Action needed</strong>-->
+    <div class="nhsuk-panel">
+  <h1 class="nhsuk-panel__title">
+    Your request to reschedule has been submitted
+  </h1>
 
-      <!-- DYNAMIC PAGE TITLE -->
-      {{ dynamicPageTitle({
-        title: pageHeading,
-        titleSecondary: true
-      })}}
+
+</div>
 
   
 
+</div>
+<h2 class="nhsuk-heading-l">Your requested appointment details</h2>
       {{ summaryList({
         classes: "nhsuk-u-margin-bottom-4",
         rows: [
@@ -71,45 +77,45 @@
         ]
       }) }}
 
+      <div class="nhsuk-u-padding-bottom-4"></div>
+      <h2 class="nhsuk-heading-m">What happens now</h2>
+      
+      <p class="nhsuk-body">You do not need to do anything else while the booking team is processing your request to reschedule.
+
+        <p class="nhsuk-u-margin-bottom-4"></p>
+
+        <p class="nhsuk-body"> Rescheduling your appointment will take approximately 48 hours. The original appointment may remain visible during that time.
+      
+          <div class="nhsuk-u-padding-bottom-4"></div>
+          <div class="nhsapp-button-group">
+            <button
+              class="nhsuk-button nhsapp-button--secondary nhsapp-button"
+              data-module="nhsuk-button"
+              type="submit"
+            >
+              View this appointment
+            </button>
+          <a href="#" class="nhsuk-link">View all appointments</a> </div>
+          
      
-
-
-            <div class="nhsuk-warning-callout">
-              <h3 class="nhsuk-warning-callout__label">
-                <span role="text">
-                  <span class="nhsuk-u-visually-hidden">Important: </span>
-                  Important
-                </span>
-              </h3>
-              <p>Cancelling this appointment may remove you from the waiting list for care. </p>
-            </div>
-
-            <h2 class="nhsuk-heading-m">How a request works</h2>
-            <p class="nhsuk-body">The booking team will review and process your request in approximately 48 hours. 
-              <p class="nhsuk-u-margin-bottom-4"></p>
-             <p class="nhsuk-body">
-
-              The cancelled appointment will remain visible until the date has passed.</p>
-            <form>
-
- 
-            
+      {{ card({
+        "type": "non-urgent",
+        "heading": "Contact your care provider if:",
+        "descriptionHtml": "
+        <ul>
+          <li>your condition has changed</li>
+          <li>you think you have a different condition</li>
+        </ul>
+        "
+      }) }}
 
       
-      <button href="/wayfinder/cancel-appointment/reason.html" class="nhsuk-button" data-module="nhsuk-button" type="submit">
-        Start
-      </button>
-
       <!-- SECTION -->
       {{ nhsappSectionHeading({
         headingText: "Get help with this task",
         subheadingText: "Contact the booking team on 01234 567 891"
       }) }}
-      
 
-
-
-      
     </div>
   </div>
 

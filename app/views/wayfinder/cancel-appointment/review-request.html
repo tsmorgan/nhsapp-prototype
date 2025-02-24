@@ -5,8 +5,7 @@
 {% set backLink = true %}
 {% set backLinkURL = "/pages/your-health/view-or-manage-appointment" %}
 
-{% set pageHeading = "Ask to cancel your appointment" %}
-
+{% set pageHeading = "Review your request" %}
 
 {% block content %}
 
@@ -22,8 +21,6 @@
         title: pageHeading,
         titleSecondary: true
       })}}
-
-  
 
       {{ summaryList({
         classes: "nhsuk-u-margin-bottom-4",
@@ -42,14 +39,6 @@
           },
           value: {
             html: "9:40am"
-          }
-        },
-        {
-          key: {
-            text: "Appointment type"
-          },
-          value: {
-            html: "Orthopaedics"
           }
         },
           {
@@ -71,45 +60,50 @@
         ]
       }) }}
 
-     
+    
 
+    <h2 class="nhsuk-heading-m">Reason</h2>
+    <p class="nhsuk-body">I cannot attend at the scheduled time</p>
+    <form>
 
-            <div class="nhsuk-warning-callout">
-              <h3 class="nhsuk-warning-callout__label">
-                <span role="text">
-                  <span class="nhsuk-u-visually-hidden">Important: </span>
-                  Important
-                </span>
-              </h3>
-              <p>Cancelling this appointment may remove you from the waiting list for care. </p>
+      <h2 class="nhsuk-heading-m">Confirm</h2>
+
+      <div class="nhsuk-form-group">
+    
+        
+    
+        
+    
+          <div class="nhsuk-checkboxes">
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                I understand that I am asking to cancel my appointment
+              </label>
             </div>
-
-            <h2 class="nhsuk-heading-m">How a request works</h2>
-            <p class="nhsuk-body">The booking team will review and process your request in approximately 48 hours. 
-              <p class="nhsuk-u-margin-bottom-4"></p>
-             <p class="nhsuk-body">
-
-              The cancelled appointment will remain visible until the date has passed.</p>
-            <form>
-
- 
-            
-
+    
+            <div class="nhsuk-u-padding-bottom-6"></div>
+    
+          </div>
+        </fieldset>
+    
+        <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+          Request cancellation
+        </button>
+      </div>
+    
+    </form>
       
-      <button href="/wayfinder/cancel-appointment/reason.html" class="nhsuk-button" data-module="nhsuk-button" type="submit">
-        Start
-      </button>
+
+     
 
       <!-- SECTION -->
       {{ nhsappSectionHeading({
         headingText: "Get help with this task",
         subheadingText: "Contact the booking team on 01234 567 891"
       }) }}
-      
 
-
-
-      
     </div>
   </div>
 
