@@ -9,8 +9,6 @@
 
 {% block content %}
 
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
 
       {% include "components/provider-banner/include.html" %}
 
@@ -22,6 +20,7 @@
         titleSecondary: true
       })}}
 
+      
       {{ summaryList({
         classes: "nhsuk-u-margin-bottom-4",
         rows: [
@@ -62,12 +61,8 @@
 
       <p class="nhsuk-u-margin-bottom-7"><a href="#" class="nhsuk-link nhsuk-link--no-visited-state">Map and directions</a></p>
 
-      <div class="nhsapp-button-group nhsuk-u-margin-bottom-0">
-        <a class="nhsuk-button nhsapp-button--secondary nhsapp-button">
-          Ask to reschedule appointment
-        </a>
-        <a href="/katy/ask-to-cancel" class="nhsuk-link nhsuk-link--no-visited-state">Ask to cancel appointment</a>
-      </div>
+     
+  
 
       <hr>
 
@@ -84,7 +79,7 @@
               <div class="nhsapp-card__above">
                 <strong class="nhsapp-tag nhsapp-tag--red nhsuk-u-static-margin-bottom-3">To read</strong>
               </div>
-              <a  href="javascript:{}" onclick="document.getElementById('appointmentForm1').submit();" class="nhsapp-card__link nhsuk-link--no-visited-state" href="">
+              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="/wayfinder/read-document/appointment-letter.html">
                 Appointment letter
               </a>
               <div class="nhsapp-card__below">
@@ -97,7 +92,6 @@
       </div>
       {% endif %}
 
-      <h3 class="nhsuk-heading-s">Done</h3>
 
       <ul class="nhsapp-cards">
         {% if data['appointment-letter'] == "read" %}
@@ -105,9 +99,9 @@
           <div class="nhsapp-card__container">   
             <div class="nhsapp-card__content">
               <div class="nhsapp-card__above">
-                <strong class="nhsapp-tag nhsapp-tag--green nhsuk-u-static-margin-bottom-3">Done</strong>
+                <strong class="nhsapp-tag nhsapp-tag--red nhsuk-u-static-margin-bottom-3">To read</strong>
               </div>
-              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="/pages/your-health/appointment-letter">
+              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="/wayfinder/read-document/appointment-letter.html">
                 Appointment letter
               </a>
               <div class="nhsapp-card__below">
@@ -122,9 +116,9 @@
           <div class="nhsapp-card__container">   
             <div class="nhsapp-card__content">
               <div class="nhsapp-card__above">
-                <strong class="nhsapp-tag nhsapp-tag--green nhsuk-u-static-margin-bottom-3">Done</strong>
+                <strong class="nhsapp-tag nhsapp-tag--red nhsuk-u-static-margin-bottom-3">To complete</strong>
               </div>
-              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="#">
+              <a class="nhsapp-card__link nhsuk-link--no-visited-state" href="/wayfinder/complete-questionnaire/radio-question.html">
                 Pre-appointment questionnaire
               </a>
               <div class="nhsapp-card__below">
@@ -135,6 +129,16 @@
           </div>
         </li>
       </ul>
+
+      <div class="nhsuk-u-padding-bottom-4"></div>
+      <div class="nhsapp-button-group"> 
+        <button
+          class="nhsuk-button nhsapp-button--secondary nhsapp-button"   
+          href="/wayfinder/reschedule-appointment/ask-to-reschedule.html"
+        >
+          Ask to reschedule appointment 
+        </button>
+      <a href="/wayfinder/cancel-appointment/ask-to-cancel.html" class="nhsuk-link">Ask to cancel appointment</a> </div>
 
       {{ card({
         "type": "non-urgent",

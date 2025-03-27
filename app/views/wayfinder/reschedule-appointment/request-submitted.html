@@ -4,119 +4,110 @@
 
 
 
-{% set backLink = true %}
-{% set backLinkURL = "/pages/your-health/view-or-manage-appointment" %}
-
-
 
 {% block content %}
 
 
 
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    {% include "components/provider-banner/include.html" %}
 
-      
-      {% include "components/provider-banner/include.html" %}
-
-    <div class="nhsuk-panel">
-  <h1 class="nhsuk-panel__title">
-    Your request to reschedule has been submitted
-  </h1>
-
-
-</div>
-
-  
-
-</div>
-<h2 class="nhsuk-heading-l">Your requested appointment details</h2>
-      {{ summaryList({
-        classes: "nhsuk-u-margin-bottom-4",
-        rows: [
-        {
-          key: {
-            text: "Date"
-          },
-          value: {
-            html: "Wednesday 1 May 2024"
-          }
-        },
-        {
-          key: {
-            text: "Time"
-          },
-          value: {
-            html: "9:40am"
-          }
-        },
-        {
-          key: {
-            text: "Appointment type"
-          },
-          value: {
-            html: "Orthopaedics"
-          }
-        },
-          {
-            key: {
-              text: "Location"
-            },
-            value: {
-              html: "Croydon University Hospital, The Willows, Croydon, RJ6"
-            }
-          },
-          {
-            key: {
-              text: "Clinician"
-            },
-            value: {
-              text: "Dr Donald Glover"
-            }
-          }
-        ]
-      }) }}
-
-      <div class="nhsuk-u-padding-bottom-4"></div>
-      <h2 class="nhsuk-heading-m">What happens now</h2>
-      
-      <p class="nhsuk-body">You do not need to do anything else while the booking team is processing your request to reschedule.
-
-        <p class="nhsuk-u-margin-bottom-4"></p>
-
-        <p class="nhsuk-body"> Rescheduling your appointment will take approximately 48 hours. The original appointment may remain visible during that time.
-      
-          <div class="nhsuk-u-padding-bottom-4"></div>
-          <div class="nhsapp-button-group">
-            <button
-              class="nhsuk-button nhsapp-button--secondary nhsapp-button"
-              data-module="nhsuk-button"
-              type="submit"
-            >
-              View this appointment
-            </button>
-          <a href="#" class="nhsuk-link">View all appointments</a> </div>
-          
-     
-      {{ card({
-        "type": "non-urgent",
-        "heading": "Contact your care provider if:",
-        "descriptionHtml": "
-        <ul>
-          <li>your condition has changed</li>
-          <li>you think you have a different condition</li>
-        </ul>
-        "
-      }) }}
-
-      
-      <!-- SECTION -->
-      {{ nhsappSectionHeading({
-        headingText: "Get help with this task",
-        subheadingText: "Contact the booking team on 01234 567 891"
-      }) }}
-
+    <div class="nhsapp-panel">
+      <h1 class="nhsapp-panel__title">
+        Your request to reschedule has been submitted
+      </h1>
     </div>
+
+
+
+  </div>
+  <h2 class="nhsuk-heading-l">Your requested appointment details</h2>
+  {{ summaryList({
+  classes: "nhsuk-u-margin-bottom-4",
+  rows: [
+  {
+  key: {
+  text: "Date"
+  },
+  value: {
+  html: "Wednesday 1 May 2024"
+  }
+  },
+  {
+  key: {
+  text: "Time"
+  },
+  value: {
+  html: "9:40am"
+  }
+  },
+  {
+  key: {
+  text: "Appointment type"
+  },
+  value: {
+  html: "Orthopaedics"
+  }
+  },
+  {
+  key: {
+  text: "Location"
+  },
+  value: {
+  html: "Croydon University Hospital, The Willows, Croydon, RJ6"
+  }
+  },
+  {
+  key: {
+  text: "Clinician"
+  },
+  value: {
+  text: "Dr Donald Glover"
+  }
+  }
+  ]
+  }) }}
+
+  <div class="nhsuk-u-padding-bottom-4"></div>
+  <h2 class="nhsuk-heading-m">What happens now</h2>
+
+  <p class="nhsuk-body">You do not need to do anything else while the booking team is processing your request to
+    reschedule.
+
+  <p class="nhsuk-u-margin-bottom-4"></p>
+
+  <p class="nhsuk-body"> Rescheduling your appointment will take approximately 48 hours. The original appointment may
+    remain visible during that time.
+
+  <div class="nhsuk-u-padding-bottom-4"></div>
+  <div class="nhsapp-button-group">
+    <button class="nhsuk-button nhsapp-button--secondary nhsapp-button" data-module="nhsuk-button" type="submit">
+      View this appointment
+    </button>
+    <a href="#" class="nhsuk-link">View all appointments</a>
   </div>
 
-  {% endblock %}
+
+  {{ card({
+  "type": "non-urgent",
+  "heading": "Contact your care provider if:",
+  "descriptionHtml": "
+  <ul>
+    <li>your condition has changed</li>
+    <li>you think you have a different condition</li>
+  </ul>
+  "
+  }) }}
+
+
+  <!-- SECTION -->
+  {{ nhsappSectionHeading({
+  headingText: "Get help with this task",
+  subheadingText: "Contact the booking team on 01234 567 891"
+  }) }}
+
+</div>
+</div>
+
+{% endblock %}

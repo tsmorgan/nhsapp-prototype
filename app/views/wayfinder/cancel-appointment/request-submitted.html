@@ -4,11 +4,6 @@
 
 
 
-{% set backLink = true %}
-{% set backLinkURL = "/pages/your-health/view-or-manage-appointment" %}
-
-
-
 {% block content %}
 
 
@@ -19,10 +14,11 @@
       
       {% include "components/provider-banner/include.html" %}
 
-    <div class="nhsuk-panel">
-  <h1 class="nhsuk-panel__title">
-    Your request to cancel has been submitted
-  </h1>
+      <div class="nhsapp-panel">
+        <h1 class="nhsapp-panel__title">
+          Your request to cancel has been submitted
+        </h1>
+      </div>
 
 
 </div>
@@ -94,7 +90,7 @@
             >
               View this appointment
             </button>
-          <a href="#" class="nhsuk-link">View all appointments</a> </div>
+          <a href="wayfinder/appointment-overview.html" class="nhsuk-link">View all appointments</a> </div>
           
      
       {{ card({
