@@ -3,7 +3,6 @@
 {% set hub = "Your health" %}
 
 {% set backLink = true %}
-{% set backLinkURL = "/pages/your-health/view-or-manage-appointment" %}
 
 {% set pageHeading = "Orthopaedics appointment" %}
 
@@ -132,12 +131,14 @@
 
       <div class="nhsuk-u-padding-bottom-4"></div>
       <div class="nhsapp-button-group"> 
-        <button
-          class="nhsuk-button nhsapp-button--secondary nhsapp-button"   
+        <a
+          class="nhsuk-button nhsapp-button--secondary nhsapp-button" 
+          data-module="nhsuk-button"
+          type="submit"  
           href="/wayfinder/reschedule-appointment/ask-to-reschedule.html"
         >
           Ask to reschedule appointment 
-        </button>
+      </a>
       <a href="/wayfinder/cancel-appointment/ask-to-cancel.html" class="nhsuk-link">Ask to cancel appointment</a> </div>
 
       {{ card({
