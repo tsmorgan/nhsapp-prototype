@@ -1,0 +1,82 @@
+{% extends 'layout-app.html' %}
+
+{% set hub = "Your health" %}
+
+{% set backLink = true %}
+
+{% set pageHeading = "Orthopaedics appointment" %}
+
+{% block content %}
+
+
+      {% include "components/provider-banner/include.html" %}
+
+      <!--<strong class="nhsapp-tag nhsapp-tag--red nhsuk-u-static-margin-bottom-2">Action needed</strong>-->
+
+      <!-- DYNAMIC PAGE TITLE -->
+      {{ dynamicPageTitle({
+        title: pageHeading,
+        titleSecondary: true
+      })}}
+
+      
+      <dl class="nhsuk-summary-list">
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Do you have difficulty breathing during or after exercise? 
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Rarely
+          </dd>
+      
+          <dd class="nhsuk-summary-list__actions">
+      
+            <a href="/wayfinder/complete-questionnaire/radio-question.html">
+              Change<span class="nhsuk-u-visually-hidden"> name</span>
+            </a>
+      
+          </dd>
+      
+        </div>
+      
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Have you had any of the following symptoms in the past 30 days? 
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Dizziness
+          </dd>
+      
+          <dd class="nhsuk-summary-list__actions">
+      
+            <a href="/wayfinder/complete-questionnaire/checkbox-question.html">
+              Change<span class="nhsuk-u-visually-hidden"> date of birth</span>
+            </a>
+      
+          </dd>
+      
+        </div>
+      
+        <div class="nhsuk-u-padding-bottom-8"></div>
+
+
+<a href="/wayfinder/complete-questionnaire/submitted.html" class="nhsuk-button" data-module="nhsuk-button" type="submit">
+  Submit answers
+</a>
+      
+        
+      
+      </dl>
+
+
+      <!-- SECTION -->
+      {{ nhsappSectionHeading({
+        headingText: "Get help with this task",
+        subheadingText: "Contact the booking team on 01234 567 891"
+      }) }}
+
+    </div>
+  </div>
+
+  {% endblock %}
